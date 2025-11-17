@@ -1,0 +1,519 @@
+
+> photo-album-organizer@1.0.0 coverage
+> vitest run --coverage
+
+
+[7m[1m[36m RUN [39m[22m[27m [36mv1.6.1[39m [90mC:/Users/purin/Documents/code/speckit-workshop2[39m
+[2m      Coverage enabled with [22m[33mv8[39m
+
+ [33m❯[39m src/main.test.js [2m ([22m[2m0 test[22m[2m)[22m
+ [32m✓[39m src/lib/utilities.test.js [2m ([22m[2m24 tests[22m[2m)[22m[90m 69[2mms[22m[39m
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mInitialization[2m > [22m[2mshould create database instance[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mInitialization[2m > [22m[2mshould be idempotent when calling initialize twice[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mInitialization[2m > [22m[2mshould have all required tables after initialization[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mInitialization[2m > [22m[2mshould have created indexes[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mQuery Operations[2m > [22m[2mshould execute simple SELECT query[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mQuery Operations[2m > [22m[2mshould execute query with parameters[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mQuery Operations[2m > [22m[2mshould return empty array for no results[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mQuery Operations[2m > [22m[2mshould throw StorageError on invalid SQL[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mExec Operations[2m > [22m[2mshould insert a row and return affected count[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mExec Operations[2m > [22m[2mshould update rows and return affected count[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mExec Operations[2m > [22m[2mshould throw StorageError on execution failure[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mTransaction Operations[2m > [22m[2mshould begin, commit transaction[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mTransaction Operations[2m > [22m[2mshould rollback transaction[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mTransaction Operations[2m > [22m[2mshould throw error when beginning nested transaction[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mTransaction Operations[2m > [22m[2mshould throw error when committing without active transaction[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mTransaction Operations[2m > [22m[2mshould throw error when rolling back without active transaction[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mHelper Methods[2m > [22m[2mgetById should return row by ID[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mHelper Methods[2m > [22m[2mgetById should return null for nonexistent ID[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mHelper Methods[2m > [22m[2mgetAll should return all rows[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mHelper Methods[2m > [22m[2mgetAll should order by provided clause[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mHelper Methods[2m > [22m[2mgetStats should return database statistics[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mDatabase Persistence[2m > [22m[2mshould export database to Uint8Array[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mDatabase Class[2m > [22m[2mDatabase Persistence[2m > [22m[2mshould save and load from IndexedDB[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mcreateDatabase Factory[2m > [22m[2mshould create and initialize a database[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/storage.test.js[2m > [22m[2mcreateDatabase Factory[2m > [22m[2mshould throw StorageError on creation failure[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+ [32m✓[39m src/app.test.js [2m ([22m[2m62 tests[22m[2m)[22m[90m 223[2mms[22m[39m
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould create album with valid data[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould throw validation error for empty name[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould throw validation error for invalid group_date[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould throw duplicate error for same name in group[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould allow same name in different groups[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould get album by ID[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould return null for nonexistent album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould update album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould throw not found error on update[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould delete album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum CRUD[2m > [22m[2mshould throw not found error on delete[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum Organization[2m > [22m[2mshould get all albums[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum Organization[2m > [22m[2mshould get albums by group[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum Organization[2m > [22m[2mshould get groups with counts[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum Organization[2m > [22m[2mshould reorder albums within group[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum Organization[2m > [22m[2mshould move album to different group[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mAlbumManager[2m > [22m[2mAlbum Organization[2m > [22m[2mshould get album with photo count[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto CRUD[2m > [22m[2mshould create photo with valid data[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto CRUD[2m > [22m[2mshould throw validation error for invalid file_size[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto CRUD[2m > [22m[2mshould throw duplicate error for same filename in album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto CRUD[2m > [22m[2mshould get photo by ID[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto CRUD[2m > [22m[2mshould update photo[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto CRUD[2m > [22m[2mshould delete photo[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto Organization[2m > [22m[2mshould get photos by album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto Organization[2m > [22m[2mshould reorder photos within album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto Organization[2m > [22m[2mshould move photo to different album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mPhoto Organization[2m > [22m[2mshould get photo stats for album[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mThumbnail Generation[2m > [22m[2mshould generate thumbnail from data URL[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+ [33m❯[39m src/lib/storage.test.js [2m ([22m[2m30 tests[22m [2m|[22m [31m25 failed[39m[2m)[22m[33m 308[2mms[22m[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould create database instance[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould be idempotent when calling initialize twice[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould have all required tables after initialization[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould have created indexes[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould execute simple SELECT query[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould execute query with parameters[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould return empty array for no results[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould throw StorageError on invalid SQL[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mExec Operations[2m > [22mshould insert a row and return affected count[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mExec Operations[2m > [22mshould update rows and return affected count[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mExec Operations[2m > [22mshould throw StorageError on execution failure[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould begin, commit transaction[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould rollback transaction[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould throw error when beginning nested transaction[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould throw error when committing without active transaction[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould throw error when rolling back without active transaction[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetById should return row by ID[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetById should return null for nonexistent ID[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetAll should return all rows[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetAll should order by provided clause[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetStats should return database statistics[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mDatabase Persistence[2m > [22mshould export database to Uint8Array[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mDatabase Persistence[2m > [22mshould save and load from IndexedDB[39m
+[31m     → indexedDB is not defined[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mcreateDatabase Factory[2m > [22mshould create and initialize a database[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/storage.test.js[2m > [22mcreateDatabase Factory[2m > [22mshould throw StorageError on creation failure[39m
+[31m     → indexedDB is not defined[39m
+ [33m❯[39m src/ui/album-list.test.js [2m ([22m[2m23 tests[22m [2m|[22m [31m3 failed[39m[2m)[22m[33m 556[2mms[22m[39m
+[31m   [33m❯[31m src/ui/album-list.test.js[2m > [22mAlbumListComponent[2m > [22mdrag and drop[2m > [22mshould handle dragstart event and set data transfer[39m
+[31m     → DragEvent is not defined[39m
+[31m   [33m❯[31m src/ui/album-list.test.js[2m > [22mAlbumListComponent[2m > [22mdrag and drop[2m > [22mshould highlight drop zone on dragover[39m
+[31m     → DragEvent is not defined[39m
+[31m   [33m❯[31m src/ui/album-list.test.js[2m > [22mAlbumListComponent[2m > [22mdrag and drop[2m > [22mshould remove highlight on dragleave[39m
+[31m     → DragEvent is not defined[39m
+ [32m✓[39m src/ui/lightbox.test.js [2m ([22m[2m46 tests[22m[2m)[22m[33m 795[2mms[22m[39m
+ [32m✓[39m src/lib/file-reader.test.js [2m ([22m[2m26 tests[22m[2m)[22m[33m 1484[2mms[22m[39m
+[90mstderr[2m | src/lib/managers.test.js[2m > [22m[2mPhotoManager[2m > [22m[2mImage Metadata[2m > [22m[2mshould extract image metadata from file[22m[39m
+Could not load database from IndexedDB: indexedDB is not defined
+
+ [33m❯[39m src/lib/managers.test.js [2m ([22m[2m29 tests[22m [2m|[22m [31m29 failed[39m[2m)[22m[33m 10383[2mms[22m[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould create album with valid data[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw validation error for empty name[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw validation error for invalid group_date[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw duplicate error for same name in group[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould allow same name in different groups[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould get album by ID[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould return null for nonexistent album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould update album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw not found error on update[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould delete album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw not found error on delete[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get all albums[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get albums by group[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get groups with counts[39m
+[31m     → expected 1 to be 2 // Object.is equality[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould reorder albums within group[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould move album to different group[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get album with photo count[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould create photo with valid data[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould throw validation error for invalid file_size[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould throw duplicate error for same filename in album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould get photo by ID[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould update photo[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould delete photo[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould get photos by album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould reorder photos within album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould move photo to different album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould get photo stats for album[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mThumbnail Generation[2m > [22mshould generate thumbnail from data URL[39m
+[31m     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m     → indexedDB is not defined[39m
+[31m   [33m❯[31m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mImage Metadata[2m > [22mshould extract image metadata from file[39m
+[31m     → Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m     → indexedDB is not defined[39m
+
+[31m⎯⎯⎯⎯⎯⎯[1m[7m Failed Suites 1 [27m[22m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/main.test.js [2m[ src/main.test.js ][22m
+[31m[1mError[22m: Failed to resolve import "../main.js" from "src/main.test.js". Does the file exist?[39m
+[90m [2m❯[22m TransformPluginContext._formatError node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m49258:41[22m[39m
+[90m [2m❯[22m TransformPluginContext.error node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m49253:16[22m[39m
+[90m [2m❯[22m normalizeUrl node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m64307:23[22m[39m
+[90m [2m❯[22m async file:/C:/Users/purin/Documents/code/speckit-workshop2/node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m64439:39[22m[39m
+[90m [2m❯[22m TransformPluginContext.transform node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m64366:7[22m[39m
+[90m [2m❯[22m PluginContainer.transform node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m49099:18[22m[39m
+[90m [2m❯[22m loadAndTransform node_modules/vite/dist/node/chunks/dep-BK3b2jBa.js:[2m51978:27[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/62]⎯[22m[39m
+
+[31m⎯⎯⎯⎯⎯⎯[1m[7m Failed Tests 57 [27m[22m⎯⎯⎯⎯⎯⎯⎯[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould create album with valid data
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw validation error for empty name
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw validation error for invalid group_date
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw duplicate error for same name in group
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould allow same name in different groups
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould get album by ID
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould return null for nonexistent album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould update album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw not found error on update
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould delete album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum CRUD[2m > [22mshould throw not found error on delete
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get all albums
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get albums by group
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get groups with counts
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould reorder albums within group
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould move album to different group
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get album with photo count
+[31m[1mReferenceError[22m: indexedDB is not defined[39m
+[36m [2m❯[22m IndexedDBError.cause src/lib/storage.js:[2m247:29[22m[39m
+    [90m245| [39m
+    [90m246| [39m      [35mreturn[39m [35mnew[39m [33mPromise[39m((resolve[33m,[39m reject) [33m=>[39m {
+    [90m247| [39m        [35mconst[39m openRequest [33m=[39m indexedDB[33m.[39m[34mopen[39m([33mINDEXEDDB_NAME[39m[33m,[39m [34m1[39m)[33m;[39m
+    [90m   | [39m                            [31m^[39m
+    [90m248| [39m
+    [90m249| [39m        openRequest[33m.[39monerror [33m=[39m () [33m=>[39m [34mreject[39m(openRequest[33m.[39merror)[33m;[39m
+[90m [2m❯[22m Database.saveToIndexedDB src/lib/storage.js:[2m246:14[22m[39m
+[90m [2m❯[22m Database.close src/lib/storage.js:[2m349:18[22m[39m
+[90m [2m❯[22m src/lib/managers.test.js:[2m27:22[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mAlbumManager[2m > [22mAlbum Organization[2m > [22mshould get groups with counts
+[31m[1mAssertionError[22m: expected 1 to be 2 // Object.is equality[39m
+
+[32m- Expected[39m
+[31m+ Received[39m
+
+[32m- 2[39m
+[31m+ 1[39m
+
+[36m [2m❯[22m src/lib/managers.test.js:[2m218:31[22m[39m
+    [90m216| [39m      [35mconst[39m groups [33m=[39m albumManager[33m.[39m[34mgetGroups[39m()[33m;[39m
+    [90m217| [39m      [34mexpect[39m(groups)[33m.[39m[34mtoHaveLength[39m([34m2[39m)[33m;[39m
+    [90m218| [39m      [34mexpect[39m(groups[[34m0[39m][33m.[39mcount)[33m.[39m[34mtoBe[39m([34m2[39m)[33m;[39m
+    [90m   | [39m                              [31m^[39m
+    [90m219| [39m      [34mexpect[39m(groups[[34m1[39m][33m.[39mcount)[33m.[39m[34mtoBe[39m([34m1[39m)[33m;[39m
+    [90m220| [39m    })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould create photo with valid data
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould throw validation error for invalid file_size
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould throw duplicate error for same filename in album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould get photo by ID
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould update photo
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto CRUD[2m > [22mshould delete photo
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould get photos by album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould reorder photos within album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould move photo to different album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mPhoto Organization[2m > [22mshould get photo stats for album
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mThumbnail Generation[2m > [22mshould generate thumbnail from data URL
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mImage Metadata[2m > [22mshould extract image metadata from file
+[31m[1mReferenceError[22m: indexedDB is not defined[39m
+[36m [2m❯[22m IndexedDBError.cause src/lib/storage.js:[2m247:29[22m[39m
+    [90m245| [39m
+    [90m246| [39m      [35mreturn[39m [35mnew[39m [33mPromise[39m((resolve[33m,[39m reject) [33m=>[39m {
+    [90m247| [39m        [35mconst[39m openRequest [33m=[39m indexedDB[33m.[39m[34mopen[39m([33mINDEXEDDB_NAME[39m[33m,[39m [34m1[39m)[33m;[39m
+    [90m   | [39m                            [31m^[39m
+    [90m248| [39m
+    [90m249| [39m        openRequest[33m.[39monerror [33m=[39m () [33m=>[39m [34mreject[39m(openRequest[33m.[39merror)[33m;[39m
+[90m [2m❯[22m Database.saveToIndexedDB src/lib/storage.js:[2m246:14[22m[39m
+[90m [2m❯[22m Database.close src/lib/storage.js:[2m349:18[22m[39m
+[90m [2m❯[22m src/lib/managers.test.js:[2m285:22[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mThumbnail Generation[2m > [22mshould generate thumbnail from data URL
+[31m[1m[7m FAIL [27m[22m[39m src/lib/managers.test.js[2m > [22mPhotoManager[2m > [22mImage Metadata[2m > [22mshould extract image metadata from file
+[31m[1mError[22m: Test timed out in 5000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".[39m
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould create database instance
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould be idempotent when calling initialize twice
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould have all required tables after initialization
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mInitialization[2m > [22mshould have created indexes
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould execute simple SELECT query
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould execute query with parameters
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould return empty array for no results
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mQuery Operations[2m > [22mshould throw StorageError on invalid SQL
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mExec Operations[2m > [22mshould insert a row and return affected count
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mExec Operations[2m > [22mshould update rows and return affected count
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mExec Operations[2m > [22mshould throw StorageError on execution failure
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould begin, commit transaction
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould rollback transaction
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould throw error when beginning nested transaction
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould throw error when committing without active transaction
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mTransaction Operations[2m > [22mshould throw error when rolling back without active transaction
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetById should return row by ID
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetById should return null for nonexistent ID
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetAll should return all rows
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetAll should order by provided clause
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mHelper Methods[2m > [22mgetStats should return database statistics
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mDatabase Persistence[2m > [22mshould export database to Uint8Array
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mDatabase Persistence[2m > [22mshould save and load from IndexedDB
+[31m[1mReferenceError[22m: indexedDB is not defined[39m
+[36m [2m❯[22m IndexedDBError.cause src/lib/storage.js:[2m247:29[22m[39m
+    [90m245| [39m
+    [90m246| [39m      [35mreturn[39m [35mnew[39m [33mPromise[39m((resolve[33m,[39m reject) [33m=>[39m {
+    [90m247| [39m        [35mconst[39m openRequest [33m=[39m indexedDB[33m.[39m[34mopen[39m([33mINDEXEDDB_NAME[39m[33m,[39m [34m1[39m)[33m;[39m
+    [90m   | [39m                            [31m^[39m
+    [90m248| [39m
+    [90m249| [39m        openRequest[33m.[39monerror [33m=[39m () [33m=>[39m [34mreject[39m(openRequest[33m.[39merror)[33m;[39m
+[90m [2m❯[22m Database.saveToIndexedDB src/lib/storage.js:[2m246:14[22m[39m
+[90m [2m❯[22m Database.close src/lib/storage.js:[2m349:18[22m[39m
+[90m [2m❯[22m src/lib/storage.test.js:[2m70:16[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mDatabase Class[2m > [22mDatabase Persistence[2m > [22mshould save and load from IndexedDB
+[31m[1mReferenceError[22m: indexedDB is not defined[39m
+[36m [2m❯[22m IndexedDBError.cause src/lib/storage.js:[2m247:29[22m[39m
+    [90m245| [39m
+    [90m246| [39m      [35mreturn[39m [35mnew[39m [33mPromise[39m((resolve[33m,[39m reject) [33m=>[39m {
+    [90m247| [39m        [35mconst[39m openRequest [33m=[39m indexedDB[33m.[39m[34mopen[39m([33mINDEXEDDB_NAME[39m[33m,[39m [34m1[39m)[33m;[39m
+    [90m   | [39m                            [31m^[39m
+    [90m248| [39m
+    [90m249| [39m        openRequest[33m.[39monerror [33m=[39m () [33m=>[39m [34mreject[39m(openRequest[33m.[39merror)[33m;[39m
+[90m [2m❯[22m Database.saveToIndexedDB src/lib/storage.js:[2m246:14[22m[39m
+[90m [2m❯[22m src/lib/storage.test.js:[2m300:16[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mcreateDatabase Factory[2m > [22mshould create and initialize a database
+[31m[1mReferenceError[22m: indexedDB is not defined[39m
+[36m [2m❯[22m IndexedDBError.cause src/lib/storage.js:[2m247:29[22m[39m
+    [90m245| [39m
+    [90m246| [39m      [35mreturn[39m [35mnew[39m [33mPromise[39m((resolve[33m,[39m reject) [33m=>[39m {
+    [90m247| [39m        [35mconst[39m openRequest [33m=[39m indexedDB[33m.[39m[34mopen[39m([33mINDEXEDDB_NAME[39m[33m,[39m [34m1[39m)[33m;[39m
+    [90m   | [39m                            [31m^[39m
+    [90m248| [39m
+    [90m249| [39m        openRequest[33m.[39monerror [33m=[39m () [33m=>[39m [34mreject[39m(openRequest[33m.[39merror)[33m;[39m
+[90m [2m❯[22m Database.saveToIndexedDB src/lib/storage.js:[2m246:14[22m[39m
+[90m [2m❯[22m Database.close src/lib/storage.js:[2m349:18[22m[39m
+[90m [2m❯[22m src/lib/storage.test.js:[2m318:14[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/lib/storage.test.js[2m > [22mcreateDatabase Factory[2m > [22mshould throw StorageError on creation failure
+[31m[1mReferenceError[22m: indexedDB is not defined[39m
+[36m [2m❯[22m IndexedDBError.cause src/lib/storage.js:[2m247:29[22m[39m
+    [90m245| [39m
+    [90m246| [39m      [35mreturn[39m [35mnew[39m [33mPromise[39m((resolve[33m,[39m reject) [33m=>[39m {
+    [90m247| [39m        [35mconst[39m openRequest [33m=[39m indexedDB[33m.[39m[34mopen[39m([33mINDEXEDDB_NAME[39m[33m,[39m [34m1[39m)[33m;[39m
+    [90m   | [39m                            [31m^[39m
+    [90m248| [39m
+    [90m249| [39m        openRequest[33m.[39monerror [33m=[39m () [33m=>[39m [34mreject[39m(openRequest[33m.[39merror)[33m;[39m
+[90m [2m❯[22m Database.saveToIndexedDB src/lib/storage.js:[2m246:14[22m[39m
+[90m [2m❯[22m Database.close src/lib/storage.js:[2m349:18[22m[39m
+[90m [2m❯[22m src/lib/storage.test.js:[2m326:14[22m[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/ui/album-list.test.js[2m > [22mAlbumListComponent[2m > [22mdrag and drop[2m > [22mshould handle dragstart event and set data transfer
+[31m[1mReferenceError[22m: DragEvent is not defined[39m
+[36m [2m❯[22m src/ui/album-list.test.js:[2m148:25[22m[39m
+    [90m146| [39m
+    [90m147| [39m      [35mconst[39m albumCard [33m=[39m container[33m.[39m[34mquerySelector[39m([32m'.album-card'[39m)[33m;[39m
+    [90m148| [39m      [35mconst[39m dragEvent [33m=[39m [35mnew[39m [33mDragEvent[39m([32m'dragstart'[39m[33m,[39m {
+    [90m   | [39m                        [31m^[39m
+    [90m149| [39m        dataTransfer[33m:[39m [35mnew[39m [33mDataTransfer[39m()[33m,[39m
+    [90m150| [39m      })[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/ui/album-list.test.js[2m > [22mAlbumListComponent[2m > [22mdrag and drop[2m > [22mshould highlight drop zone on dragover
+[31m[1mReferenceError[22m: DragEvent is not defined[39m
+[36m [2m❯[22m src/ui/album-list.test.js:[2m174:25[22m[39m
+    [90m172| [39m
+    [90m173| [39m      [35mconst[39m albums [33m=[39m container[33m.[39m[34mquerySelectorAll[39m([32m'.album-card'[39m)[33m;[39m
+    [90m174| [39m      [35mconst[39m dragEvent [33m=[39m [35mnew[39m [33mDragEvent[39m([32m'dragover'[39m[33m,[39m {
+    [90m   | [39m                        [31m^[39m
+    [90m175| [39m        bubbles[33m:[39m [35mtrue[39m[33m,[39m
+    [90m176| [39m        cancelable[33m:[39m [35mtrue[39m[33m,[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/62]⎯[22m[39m
+
+[31m[1m[7m FAIL [27m[22m[39m src/ui/album-list.test.js[2m > [22mAlbumListComponent[2m > [22mdrag and drop[2m > [22mshould remove highlight on dragleave
+[31m[1mReferenceError[22m: DragEvent is not defined[39m
+[36m [2m❯[22m src/ui/album-list.test.js:[2m198:25[22m[39m
+    [90m196| [39m
+    [90m197| [39m      [35mconst[39m albumCard [33m=[39m container[33m.[39m[34mquerySelector[39m([32m'.album-card'[39m)[33m;[39m
+    [90m198| [39m      [35mconst[39m dragEvent [33m=[39m [35mnew[39m [33mDragEvent[39m([32m'dragleave'[39m[33m,[39m { bubbles[33m:[39m [35mtrue[39m })[33m;[39m
+    [90m   | [39m                        [31m^[39m
+    [90m199| [39m
+    [90m200| [39m      albumCard[33m.[39m[34mdispatchEvent[39m(dragEvent)[33m;[39m
+
+[31m[2m⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/62]⎯[22m[39m
+
+[2m Test Files [22m [1m[31m4 failed[39m[22m[2m | [22m[1m[32m4 passed[39m[22m[90m (8)[39m
+[2m      Tests [22m [1m[31m57 failed[39m[22m[2m | [22m[1m[32m183 passed[39m[22m[90m (240)[39m
+[2m   Start at [22m 14:56:09
+[2m   Duration [22m 13.99s[2m (transform 532ms, setup 3ms, collect 1.37s, tests 13.82s, environment 19.41s, prepare 3.78s)[22m
+

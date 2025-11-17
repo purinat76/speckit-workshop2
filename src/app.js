@@ -10,6 +10,8 @@ import { PhotoManager } from './lib/photo-manager.js';
 import { AppState } from './lib/state.js';
 import { AlbumListComponent } from './ui/album-list.js';
 import { LightboxComponent } from './ui/lightbox.js';
+import { loadPhotosFromFiles } from './lib/file-reader.js';
+import { formatToGroupDate } from './lib/date-format.js';
 
 /**
  * App class - Main application controller
@@ -183,10 +185,101 @@ class App {
   /**
    * Handle upload photos
    * @private
+   * @async
    */
-  _handleUploadPhotos() {
-    // TODO: Implement photo upload
-    this._showInfo('Photo upload coming in Phase 2');
+  async _handleUploadPhotos() {
+    const fileInput = document.getElementById('photo-file-input');
+    if (!fileInput || !fileInput.files || fileInput.files.length === 0) {
+      this._showError('No files selected');
+      return;
+    }
+
+    try {
+      this._showInfo('Processing photos...');
+
+      // Load and extract metadata from files
+      const result = await loadPhotosFromFiles(fileInput.files);
+      const { photos, failedCount, totalCount } = result;
+
+      if (photos.length === 0) {
+        this._showError('No valid photos found');
+        return;
+      }
+
+      // Get or create albums by date
+      const albumsByDate = new Map();
+
+      for (const photoMeta of photos) {
+        // Determine album by file date
+        const groupDate = formatToGroupDate(new Date(photoMeta.last_modified));
+
+        // Get or create album for this date
+        let album = albumsByDate.get(groupDate);
+        if (!album) {
+          // Check if album exists for this date
+          const existingAlbums = this.albumManager.getAlbumsByGroup(groupDate);
+          if (existingAlbums.length > 0) {
+            album = existingAlbums[0]; // Use first album in group
+          } else {
+            // Create new album
+            const date = new Date(photoMeta.last_modified);
+            const monthNames = [
+              'January',
+              'February',
+              'March',
+              'April',
+              'May',
+              'June',
+              'July',
+              'August',
+              'September',
+              'October',
+              'November',
+              'December',
+            ];
+            const albumName = `${monthNames[date.getMonth()]} ${date.getFullYear()}`;
+
+            album = this.albumManager.createAlbum({
+              name: albumName,
+              group_date: groupDate,
+              sort_index: 0,
+            });
+          }
+          albumsByDate.set(groupDate, album);
+        }
+
+        // Generate thumbnail
+        const thumbnail = await this.photoManager.generateThumbnail(photoMeta.data_url);
+
+        // Create photo in database
+        this.photoManager.createPhoto({
+          album_id: album.id,
+          filename: photoMeta.filename,
+          thumbnail,
+          file_size: photoMeta.file_size,
+          mime_type: photoMeta.mime_type,
+          width: photoMeta.width,
+          height: photoMeta.height,
+          sort_index: 0,
+        });
+      }
+
+      // Reload UI
+      await this._loadInitialData();
+
+      // Show success message
+      let message = `Successfully uploaded ${photos.length} photo${photos.length === 1 ? '' : 's'}`;
+      if (failedCount > 0) {
+        message += ` (${failedCount} failed)`;
+      }
+      this._showInfo(message);
+
+      // Clear file input
+      fileInput.value = '';
+    } catch (error) {
+      console.error('Failed to upload photos:', error);
+      this._showError(`Failed to upload photos: ${error.message}`);
+    }
   }
 
   /**

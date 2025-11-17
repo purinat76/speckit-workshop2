@@ -25,7 +25,42 @@
 
     <!-- Main content area -->
     <main id="main-content" role="main">
-      <div id="app-container"></div>
+      <!-- Control buttons -->
+      <div class="controls">
+        <button id="create-album-btn" class="btn btn--primary">
+          Create Album
+        </button>
+        <button id="upload-photos-btn" class="btn btn--secondary">
+          Upload Photos
+        </button>
+        <input
+          type="file"
+          id="photo-file-input"
+          accept="image/*"
+          multiple
+          style="display: none"
+        />
+      </div>
+
+      <!-- Messages -->
+      <div
+        id="error-message"
+        role="alert"
+        class="message message--error"
+        style="display: none"
+      ></div>
+      <div
+        id="info-message"
+        role="status"
+        class="message message--info"
+        style="display: none"
+      ></div>
+
+      <!-- Album list container -->
+      <div id="album-list-container"></div>
+
+      <!-- Lightbox container -->
+      <div id="lightbox-container"></div>
     </main>
 
     <!-- Screen reader announcements area -->

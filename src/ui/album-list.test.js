@@ -14,11 +14,12 @@ describe('AlbumListComponent', () => {
     document.body.appendChild(container);
 
     // Create component with mocked callbacks
-    component = new AlbumListComponent(container, {
+    component = new AlbumListComponent({
+      container,
+      albumManager: null, // Not needed for these tests
+      appState: null, // Not needed for these tests
       onAlbumSelect: vi.fn(),
       onAlbumReorder: vi.fn(),
-      onAlbumEdit: vi.fn(),
-      onAlbumDelete: vi.fn(),
     });
   });
 

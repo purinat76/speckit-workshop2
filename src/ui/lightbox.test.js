@@ -31,7 +31,9 @@ describe('LightboxComponent', () => {
     document.body.appendChild(container);
 
     // Create component with mocked callbacks
-    component = new LightboxComponent(container, {
+    component = new LightboxComponent({
+      container,
+      photoManager: null, // Not needed for these tests
       onClose: vi.fn(),
     });
   });

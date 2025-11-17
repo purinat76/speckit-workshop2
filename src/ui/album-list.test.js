@@ -32,7 +32,7 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 2,
           albums: [
             { id: 'a1', name: 'New Year', photo_count: 5 },
             { id: 'a2', name: 'Winter', photo_count: 10 },
@@ -42,18 +42,18 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const groupHeaders = container.querySelectorAll('[data-group-header]');
+      const groupHeaders = container.querySelectorAll('.album-group__header');
       expect(groupHeaders).toHaveLength(1);
-      expect(groupHeaders[0].textContent).toContain('January 2025');
+      expect(groupHeaders[0].textContent).toContain('2 albums');
 
-      const albumCards = container.querySelectorAll('[data-album-card]');
+      const albumCards = container.querySelectorAll('.album-card');
       expect(albumCards).toHaveLength(2);
     });
 
     it('should render empty state when no groups provided', () => {
       component.render([]);
 
-      const emptyState = container.querySelector('[data-empty-state]');
+      const emptyState = container.querySelector('.album-list__empty');
       expect(emptyState).toBeTruthy();
       expect(emptyState.textContent).toContain('No albums');
     });
@@ -62,7 +62,7 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 3,
           albums: [
             { id: 'a1', name: 'Album 1', photo_count: 5 },
             { id: 'a2', name: 'Album 2', photo_count: 10 },
@@ -73,7 +73,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const groupHeader = container.querySelector('[data-group-header]');
+      const groupHeader = container.querySelector('.album-group__header');
       expect(groupHeader.textContent).toContain('3 albums');
     });
 
@@ -81,14 +81,14 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 1,
           albums: [{ id: 'a1', name: 'Test Album', photo_count: 7 }],
         },
       ];
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       expect(albumCard).toBeTruthy();
       expect(albumCard.textContent).toContain('Test Album');
       expect(albumCard.textContent).toContain('7 photos');
@@ -101,14 +101,14 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 1,
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
       ];
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       expect(albumCard.draggable).toBe(true);
     });
 
@@ -116,16 +116,16 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 1,
           albums: [{ id: 'a1', name: 'Vacation', photo_count: 15 }],
         },
       ];
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
-      expect(albumCard.getAttribute('aria-label')).toContain('Vacation');
-      expect(albumCard.getAttribute('aria-label')).toContain('15 photos');
+      const albumCard = container.querySelector('.album-card');
+      const viewButton = albumCard.querySelector('button[aria-label*="View"]');
+      expect(viewButton.getAttribute('aria-label')).toContain('Vacation');
     });
   });
 
@@ -134,7 +134,7 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 2,
           albums: [
             { id: 'a1', name: 'Album 1', photo_count: 5 },
             { id: 'a2', name: 'Album 2', photo_count: 10 },
@@ -144,7 +144,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       const dragEvent = new DragEvent('dragstart', {
         dataTransfer: new DataTransfer(),
       });
@@ -153,7 +153,7 @@ describe('AlbumListComponent', () => {
       albumCard.dispatchEvent(dragEvent);
 
       // Verify dragstart handler was triggered
-      expect(container.querySelector('[data-album-card]')).toBeTruthy();
+      expect(container.querySelector('.album-card')).toBeTruthy();
     });
 
     it('should highlight drop zone on dragover', () => {
@@ -170,7 +170,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const albums = container.querySelectorAll('[data-album-card]');
+      const albums = container.querySelectorAll('.album-card');
       const dragEvent = new DragEvent('dragover', {
         bubbles: true,
         cancelable: true,
@@ -194,7 +194,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       const dragEvent = new DragEvent('dragleave', { bubbles: true });
 
       albumCard.dispatchEvent(dragEvent);
@@ -216,7 +216,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       const keyEvent = new KeyboardEvent('keydown', {
         key: 'Enter',
         bubbles: true,
@@ -239,7 +239,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       const keyEvent = new KeyboardEvent('keydown', {
         key: ' ',
         bubbles: true,
@@ -265,7 +265,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const albumCards = container.querySelectorAll('[data-album-card]');
+      const albumCards = container.querySelectorAll('.album-card');
       expect(albumCards[0].getAttribute('tabindex')).toBeDefined();
       expect(albumCards[1].getAttribute('tabindex')).toBeDefined();
     });
@@ -364,7 +364,7 @@ describe('AlbumListComponent', () => {
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       const tabindex = albumCard.getAttribute('tabindex');
 
       // Should be focusable
@@ -398,19 +398,19 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 1,
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
         {
           group_date: '2025-02',
-          title: 'February 2025',
+          count: 1,
           albums: [{ id: 'a2', name: 'Album 2', photo_count: 8 }],
         },
       ];
 
       component.render(groups);
 
-      const groupHeaders = container.querySelectorAll('[data-group-header]');
+      const groupHeaders = container.querySelectorAll('.album-group__header');
       expect(groupHeaders).toHaveLength(2);
     });
 
@@ -424,14 +424,14 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 50,
           albums,
         },
       ];
 
       component.render(groups);
 
-      const albumCards = container.querySelectorAll('[data-album-card]');
+      const albumCards = container.querySelectorAll('.album-card');
       expect(albumCards).toHaveLength(50);
     });
   });
@@ -441,14 +441,14 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 1,
           albums: [{ id: 'a1', name: 'Empty Album', photo_count: 0 }],
         },
       ];
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       expect(albumCard.textContent).toContain('0 photos');
     });
 
@@ -456,14 +456,14 @@ describe('AlbumListComponent', () => {
       const groups = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 1,
           albums: [{ id: 'a1', name: 'Album & Friends <3', photo_count: 5 }],
         },
       ];
 
       component.render(groups);
 
-      const albumCard = container.querySelector('[data-album-card]');
+      const albumCard = container.querySelector('.album-card');
       expect(albumCard.textContent).toContain('Album & Friends <3');
     });
 
@@ -471,19 +471,19 @@ describe('AlbumListComponent', () => {
       const groups1 = [
         {
           group_date: '2025-01',
-          title: 'January 2025',
+          count: 1,
           albums: [{ id: 'a1', name: 'Album 1', photo_count: 5 }],
         },
       ];
 
       component.render(groups1);
-      const firstRenderCards = container.querySelectorAll('[data-album-card]');
+      const firstRenderCards = container.querySelectorAll('.album-card');
       expect(firstRenderCards).toHaveLength(1);
 
       const groups2 = [
         {
           group_date: '2025-02',
-          title: 'February 2025',
+          count: 2,
           albums: [
             { id: 'a2', name: 'Album 2', photo_count: 8 },
             { id: 'a3', name: 'Album 3', photo_count: 10 },
@@ -492,7 +492,7 @@ describe('AlbumListComponent', () => {
       ];
 
       component.render(groups2);
-      const secondRenderCards = container.querySelectorAll('[data-album-card]');
+      const secondRenderCards = container.querySelectorAll('.album-card');
       expect(secondRenderCards).toHaveLength(2);
     });
   });

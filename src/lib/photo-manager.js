@@ -38,11 +38,11 @@ function validatePhoto(photo, requireId = false) {
     throw new ValidationError('Photo mime_type must be a non-empty string', { field: 'mime_type' });
   }
 
-  if (photo.width !== undefined && (typeof photo.width !== 'number' || photo.width <= 0)) {
+  if (photo.width !== undefined && photo.width !== null && (typeof photo.width !== 'number' || photo.width <= 0)) {
     throw new ValidationError('Photo width must be a positive number', { field: 'width' });
   }
 
-  if (photo.height !== undefined && (typeof photo.height !== 'number' || photo.height <= 0)) {
+  if (photo.height !== undefined && photo.height !== null && (typeof photo.height !== 'number' || photo.height <= 0)) {
     throw new ValidationError('Photo height must be a positive number', { field: 'height' });
   }
 
@@ -434,8 +434,8 @@ class PhotoManager {
       filename: row.filename,
       file_size: row.file_size,
       mime_type: row.mime_type,
-      width: row.width,
-      height: row.height,
+      width: row.width || null,
+      height: row.height || null,
       created_at: row.created_at,
       updated_at: row.updated_at,
       sort_index: row.sort_index,

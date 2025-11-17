@@ -122,10 +122,12 @@ class AlbumListComponent {
     // Album content area
     const content = document.createElement('div');
     content.className = 'album-card__content';
+    const photoCount = album.photo_count || 0;
+    const photoText = photoCount === 1 ? '1 photo' : `${photoCount} photos`;
     content.innerHTML = `
       <div class="album-card__meta">
-        <span class="album-card__date">${this._formatDate(album.created_at)}</span>
-        <span class="album-card__count" data-album-id="${album.id}">0 photos</span>
+        <span class="album-card__date">${this._formatDate(album.created_at || Date.now())}</span>
+        <span class="album-card__count" data-album-id="${album.id}">${photoText}</span>
       </div>
     `;
     albumElement.appendChild(content);

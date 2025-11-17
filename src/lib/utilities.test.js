@@ -125,8 +125,8 @@ describe('Date Formatting', () => {
   });
 
   it('should format time ago', () => {
-    const now = Date.now();
-    expect(formatTimeAgo(now)).toContain('ago');
+    const oneMinuteAgo = Date.now() - 60 * 1000;
+    expect(formatTimeAgo(oneMinuteAgo)).toContain('ago');
   });
 
   it('should say "just now" for recent timestamp', () => {

@@ -1,0 +1,423 @@
+/**
+ * PHASE 1 COMPONENT STYLES
+ * Styles for album list, album detail, lightbox, and drag-drop interactions
+ */
+
+/* ===== ALBUM LIST ===== */
+
+.album-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
+}
+
+.album-list__empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background: var(--color-neutral-50);
+  border-radius: var(--border-radius-md);
+  border: 2px dashed var(--color-neutral-200);
+}
+
+.album-list__empty-text {
+  font-size: var(--font-size-lg);
+  color: var(--color-neutral-600);
+  text-align: center;
+}
+
+/* Album Groups */
+
+.album-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.album-group__header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 2px solid var(--color-primary-200);
+  margin: 0;
+}
+
+.album-group__title {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-900);
+}
+
+.album-group__count {
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+  margin-left: auto;
+}
+
+.album-group__albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+/* Album Cards */
+
+.album-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border: 1px solid var(--color-neutral-200);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  outline: none;
+}
+
+.album-card:hover {
+  border-color: var(--color-primary-500);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.album-card:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 2px;
+}
+
+.album-card--dragging {
+  opacity: 0.5;
+  border: 2px dashed var(--color-primary-500);
+}
+
+.album-card--drag-over {
+  border: 2px solid var(--color-primary-500);
+  background: var(--color-primary-50);
+}
+
+.album-card__header {
+  padding: var(--spacing-md);
+  background: var(--color-neutral-50);
+  border-bottom: 1px solid var(--color-neutral-200);
+}
+
+.album-card__title {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-neutral-900);
+  word-break: break-word;
+}
+
+.album-card__content {
+  flex: 1;
+  padding: var(--spacing-md);
+}
+
+.album-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-neutral-600);
+}
+
+.album-card__date {
+  font-weight: var(--font-weight-medium);
+}
+
+.album-card__count {
+  background: var(--color-primary-100);
+  color: var(--color-primary-900);
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: var(--font-weight-medium);
+}
+
+.album-card__actions {
+  display: flex;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  border-top: 1px solid var(--color-neutral-200);
+  background: var(--color-neutral-50);
+}
+
+.album-card__action {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-neutral-300);
+  background: white;
+  border-radius: var(--border-radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.album-card__action:hover:not(:disabled) {
+  background: var(--color-primary-500);
+  color: white;
+  border-color: var(--color-primary-500);
+}
+
+.album-card__action:focus-visible {
+  outline: 2px solid var(--color-primary-500);
+  outline-offset: 1px;
+}
+
+.album-card__action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.album-card__action--delete {
+  background: var(--color-error-50);
+  border-color: var(--color-error-200);
+  color: var(--color-error-900);
+  font-size: var(--font-size-lg);
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.album-card__action--delete:hover {
+  background: var(--color-error-500);
+  color: white;
+  border-color: var(--color-error-500);
+}
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-index-lightbox, 1050);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox__content {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  max-width: 1200px;
+  max-height: 800px;
+  background: black;
+  border-radius: var(--border-radius-md);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.lightbox__close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox__close:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+  z-index: 10;
+}
+
+.lightbox__nav:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox__nav:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.lightbox__nav--prev {
+  left: var(--spacing-md);
+}
+
+.lightbox__nav--next {
+  right: var(--spacing-md);
+}
+
+.lightbox__photo-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: black;
+}
+
+.lightbox__photo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.lightbox__footer {
+  background: rgba(0, 0, 0, 0.8);
+  padding: var(--spacing-md);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.lightbox__info {
+  display: flex;
+  gap: var(--spacing-md);
+  color: white;
+  font-size: var(--font-size-sm);
+}
+
+.lightbox__counter {
+  font-weight: var(--font-weight-bold);
+}
+
+.lightbox__title {
+  color: var(--color-neutral-300);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.lightbox__thumbnails {
+  display: flex;
+  gap: var(--spacing-sm);
+  overflow-x: auto;
+}
+
+.lightbox__thumbnail {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+  background: none;
+  padding: 0;
+}
+
+.lightbox__thumbnail:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.lightbox__thumbnail--active {
+  border-color: var(--color-primary-500);
+}
+
+.lightbox__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media (max-width: 768px) {
+  .album-group__albums {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  .lightbox__content {
+    width: 95%;
+    height: 95%;
+  }
+
+  .lightbox__nav {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .lightbox__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .album-group__albums {
+    grid-template-columns: 1fr;
+  }
+
+  .album-card__actions {
+    flex-wrap: wrap;
+  }
+
+  .album-card__action {
+    flex: 0 1 calc(33.333% - var(--spacing-sm));
+  }
+
+  .lightbox__content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+
+  .lightbox__nav {
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+  }
+
+  .lightbox__close {
+    width: 36px;
+    height: 36px;
+  }
+}
+
+/* ===== REDUCED MOTION ===== */
+
+@media (prefers-reduced-motion: reduce) {
+  .album-card,
+  .lightbox__nav,
+  .album-card__action {
+    transition: none;
+  }
+}

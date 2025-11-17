@@ -3,20 +3,32 @@
  * Initializes the Photo Album Organizer application
  */
 
+// @ts-nocheck
+/* eslint-disable no-undef */
+
+import { App } from './app.js';
+
 /**
  * Main application initialization
- * Sets up event listeners and initializes core modules
+ * Delegates to App controller for complete setup
  * @async
  */
 async function initializeApp() {
   console.log('Initializing Photo Album Organizer...');
 
-  // TODO: Initialize storage layer
-  // TODO: Load albums from database
-  // TODO: Render initial UI
-  // TODO: Set up event listeners
-
-  console.log('Application initialized successfully');
+  try {
+    const app = new App();
+    await app.initialize();
+    console.log('Application initialized successfully');
+  } catch (error) {
+    console.error('Failed to initialize application:', error);
+    // Display error to user
+    const errorContainer = document.getElementById('error-message');
+    if (errorContainer) {
+      errorContainer.textContent = `Application Error: ${error.message}`;
+      errorContainer.style.display = 'block';
+    }
+  }
 }
 
 // Initialize app when DOM is ready

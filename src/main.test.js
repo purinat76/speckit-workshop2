@@ -22,7 +22,7 @@ describe('Photo Album Organizer - Smoke Tests', () => {
   });
 
   it('should export initializeApp from main.js', async () => {
-    const { initializeApp } = await import('../main.js');
+    const { initializeApp } = await import('./main.js');
     expect(initializeApp).toBeDefined();
     expect(typeof initializeApp).toBe('function');
   });

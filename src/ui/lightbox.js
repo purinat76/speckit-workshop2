@@ -154,6 +154,7 @@ class LightboxComponent {
       thumbButton.className = 'lightbox__thumbnail';
       if (index === this.currentIndex) {
         thumbButton.classList.add('lightbox__thumbnail--active');
+        thumbButton.setAttribute('aria-current', 'true');
       }
       thumbButton.setAttribute('aria-label', `Photo ${index + 1}: ${photo.filename}`);
       thumbButton.addEventListener('click', () => this.goToIndex(index));

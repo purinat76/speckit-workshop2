@@ -6,22 +6,22 @@
  */
 
 import { describe, it, expect, beforeEach } from 'vitest';
-import { AppState } from '../src/lib/state.js';
+import { AppState } from './state.js';
 import {
   formatToGroupDate,
   formatGroupDate,
   formatTimestamp,
   formatDateTime,
   formatTimeAgo,
-} from '../src/lib/date-format.js';
+} from './date-format.js';
 import {
   isEnterKey,
   isEscapeKey,
   isSpaceKey,
   isArrowKey,
   announceToScreenReader,
-} from '../src/lib/keyboard.js';
-import { PerformanceMonitor } from '../src/lib/perf.js';
+} from './keyboard.js';
+import { PerformanceMonitor } from './perf.js';
 
 describe('AppState', () => {
   let state;

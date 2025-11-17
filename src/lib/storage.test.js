@@ -6,14 +6,14 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { Database, createDatabase } from '../src/lib/storage.js';
+import { Database, createDatabase } from './storage.js';
 import {
   StorageError,
   ValidationError,
   NotFoundError,
   DuplicateError,
   TransactionError,
-} from '../src/lib/errors.js';
+} from './errors.js';
 
 describe('Error Classes', () => {
   it('StorageError should be instantiable', () => {

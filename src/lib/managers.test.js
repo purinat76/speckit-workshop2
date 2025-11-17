@@ -5,14 +5,14 @@
  */
 
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { createDatabase } from '../src/lib/storage.js';
-import { AlbumManager } from '../src/lib/album-manager.js';
-import { PhotoManager } from '../src/lib/photo-manager.js';
+import { createDatabase } from './storage.js';
+import { AlbumManager } from './album-manager.js';
+import { PhotoManager } from './photo-manager.js';
 import {
   ValidationError,
   NotFoundError,
   DuplicateError,
-} from '../src/lib/errors.js';
+} from './errors.js';
 
 describe('AlbumManager', () => {
   let db;

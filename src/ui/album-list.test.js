@@ -31,7 +31,7 @@ describe('AlbumListComponent', () => {
     it('should render album groups with headers and cards', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [
             { id: 'a1', name: 'New Year', photo_count: 5 },
@@ -61,7 +61,7 @@ describe('AlbumListComponent', () => {
     it('should render group headers with album counts', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [
             { id: 'a1', name: 'Album 1', photo_count: 5 },
@@ -80,7 +80,7 @@ describe('AlbumListComponent', () => {
     it('should render album cards with correct structure', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Test Album', photo_count: 7 }],
         },
@@ -100,7 +100,7 @@ describe('AlbumListComponent', () => {
     it('should set draggable attribute on album cards', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -115,7 +115,7 @@ describe('AlbumListComponent', () => {
     it('should set aria-label on album cards for accessibility', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Vacation', photo_count: 15 }],
         },
@@ -133,7 +133,7 @@ describe('AlbumListComponent', () => {
     it('should handle dragstart event and set data transfer', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [
             { id: 'a1', name: 'Album 1', photo_count: 5 },
@@ -159,7 +159,7 @@ describe('AlbumListComponent', () => {
     it('should highlight drop zone on dragover', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [
             { id: 'a1', name: 'Album 1', photo_count: 5 },
@@ -186,7 +186,7 @@ describe('AlbumListComponent', () => {
     it('should remove highlight on dragleave', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album 1', photo_count: 5 }],
         },
@@ -208,7 +208,7 @@ describe('AlbumListComponent', () => {
     it('should trigger album select on Enter key', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -231,7 +231,7 @@ describe('AlbumListComponent', () => {
     it('should trigger album select on Space key', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -254,7 +254,7 @@ describe('AlbumListComponent', () => {
     it('should allow tabbing between album cards', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [
             { id: 'a1', name: 'Album 1', photo_count: 5 },
@@ -275,7 +275,7 @@ describe('AlbumListComponent', () => {
     it('should trigger onAlbumSelect when View button clicked', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -296,7 +296,7 @@ describe('AlbumListComponent', () => {
     it('should display edit button for each album', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [
             { id: 'a1', name: 'Album 1', photo_count: 5 },
@@ -314,7 +314,7 @@ describe('AlbumListComponent', () => {
     it('should display delete button for each album', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -337,7 +337,7 @@ describe('AlbumListComponent', () => {
     it('should have proper semantic HTML structure', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -356,7 +356,7 @@ describe('AlbumListComponent', () => {
     it('should have proper focus management for keyboard nav', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -375,7 +375,7 @@ describe('AlbumListComponent', () => {
     it('should provide aria-labels for images/icons in buttons', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
@@ -397,12 +397,12 @@ describe('AlbumListComponent', () => {
     it('should render multiple groups in vertical layout', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album', photo_count: 5 }],
         },
         {
-          groupDate: '2025-02',
+          group_date: '2025-02',
           title: 'February 2025',
           albums: [{ id: 'a2', name: 'Album 2', photo_count: 8 }],
         },
@@ -423,7 +423,7 @@ describe('AlbumListComponent', () => {
 
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums,
         },
@@ -440,7 +440,7 @@ describe('AlbumListComponent', () => {
     it('should handle albums with zero photos', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Empty Album', photo_count: 0 }],
         },
@@ -455,7 +455,7 @@ describe('AlbumListComponent', () => {
     it('should handle album names with special characters', () => {
       const groups = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album & Friends <3', photo_count: 5 }],
         },
@@ -470,7 +470,7 @@ describe('AlbumListComponent', () => {
     it('should clear previous content when render called again', () => {
       const groups1 = [
         {
-          groupDate: '2025-01',
+          group_date: '2025-01',
           title: 'January 2025',
           albums: [{ id: 'a1', name: 'Album 1', photo_count: 5 }],
         },
@@ -482,7 +482,7 @@ describe('AlbumListComponent', () => {
 
       const groups2 = [
         {
-          groupDate: '2025-02',
+          group_date: '2025-02',
           title: 'February 2025',
           albums: [
             { id: 'a2', name: 'Album 2', photo_count: 8 },

@@ -41,8 +41,9 @@ export async function loadPhotosFromFiles(files) {
  * @returns {boolean} True if valid image
  */
 export function isValidImageFile(file) {
+  if (!file) return false;
   const validTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif'];
-  return file && validTypes.includes(file.type);
+  return validTypes.includes(file.type);
 }
 
 /**
